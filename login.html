@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/62bdaaf968.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title"> sign up </h1>
+        <form action="">
+            <div class="input-group">
+
+            <div class="input-field" id="nameField">
+                <i class="fa-solid fa-users"></i>
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-field">
+                <i class="fa-regular fa-envelope"></i>
+                <input email="text" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <i class="fa-solid fa-unlock"></i>
+                <input type="password" placeholder="password">
+                       </div>
+            <p id="">Forget Possward? <a href="">Click here!</a></p>
+        </div>
+        <div class="btn-f">
+            <button type="button" id="signupBtn">sign up</button>
+            <button type="button" class="disable" id="signinBtn">sign in</button>
+        </div>
+       
+
+            
+             </form>
+    </div>
+</div>
+<script>
+    let signupBtn = document.getElementById("signupBtn")
+    let signinBtn= document.getElementById("signinBtn")
+    let nameField = document.getElementById("nameField")
+    let title = document.getElementById("title")
+      
+signinBtn.onclick = function(){
+    nameField.style.maxHeight="0"; 
+    title.innerHTML = "Sign In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+
+}
+
+    
+signupBtn.onclick = function(){
+    nameField.style.maxHeight="60px";
+    title.innerHTML = "Sign Up";
+    signinBtn.classList.add("disable");
+    signupBtn.classList.remove("disable");
+      
+
+}
+</script>
+    
+</body>
+</html>
